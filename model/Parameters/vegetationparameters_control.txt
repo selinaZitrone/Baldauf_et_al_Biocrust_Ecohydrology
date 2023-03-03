@@ -1,0 +1,142 @@
+#Vegetation parameters for model EcoHyD
+
+#General vegetation parameters
+resWater: 0.035               [vol%]    	residual water content, the soil cannot dry out below this content
+moistL1: 0.035                [-]       	moisture in upper layer
+moistL2: 0.035                [-]       	moisture in lower layer
+maxDistS: 0.010               [m]       	maximial dispersal distance 
+growStart: 150                [d]       	first day of growing season
+growEnd: 330                  [d]       	last day time of growing season
+aGrowthConst: 0.01            [-]       	growth constant of annual grass 
+sclim: 0.001                  [-]       	limitation of shrub cover (if cover above sclim, we set shrub cover 0)
+scrlim: 0.1                   [-]       	limitation of shrub cover (if cover below scrlim, we assume shrubs to be juvenile and non-reproducing) 
+pgshare: 0.75                 [-]       	ratio of biomass in cell that is tried to be taken from pg
+inishare: 0.75                [-]       	ratio of daily need that is taken on average from first cell
+overlap: 0.2                  [-]       	overlap of shrub and grass
+grazeParam: 0.1               [-]       	constant shaping quadratic function of grazing damage
+bm_c_rain: 0.35               [-]       	constant for linear increase of biomass per unit of cover depending on annual precipitation
+map: 400                      [-]       	mean annual precipitation
+grazeparA: 0.1                [-]       	constant shaping quadratic function of grazing damage
+grazeparB: 0.8                [-]       	constant shaping quadratic function of grazing damage
+firecoeff: 0.5                [W*(m-2*g-1)]  	coefficient determining the increase in fire intensity with fuel load
+fuelLim: 900                  [g]       	minimum grass biomass that is needed for a fire 
+EnScover: 0.4                 [-]       	maximum encroahment shrub cover
+initialshare: 1.0             [-]             	initial share of grazing in one cell
+Stocking rate: 16	      [?]		stocking rate for grazing and dispersal
+percap: 0.02                  [?]   		the amount of the livestock body mass per day for biomass demand
+BMneed: 450000                [?]   		the related parameter to calculate the biomass per year
+Fire: 0			      [-]		bool for fire calculation (0 = no, 1 = yes). Fire routine is not working properly. Needs to be reviewed first.
+Shrubs: 1                     [-]		number of shrub types necessary to initialise vector sizes
+Perennials: 1	              [-]		number of perennial grass types necessary to initialise vector sizes
+Annuals: 1                    [-]		number of annual grass types necessary to initialise vector sizes
+PerennialNS: 0.9	      [-]	       	generated perennial cover when having no shrub
+
+#PFTs always in the order: Shrub, Perennial, Annual
+
+###################
+#   Shrub         #
+#   PFT  1        #
+##################*
+Name: shrub1                  [-]              	Name of PFT
+type: shrub                   [-]              	Type of PFT
+UptakeRate: 0.5               [mm*(yr*g)-1]    	relative uptake rate per woody biomass
+RootL1: 0.36                  [-]              	fraction of woody roots in upper layer
+RootL2: 0.64                  [-]              	fraction of woody roots in lower layer
+GrowthR: 0.3                  [mm-1*yr-1]      	potential growth rate of shrub
+Transcoef: 0.15               [mm-1*yr-1]      	transformation coefficient of transpiration on shrub growth
+Kcoef: 0.75                   [-]              	light attenuation coeffcient of shrub 
+ecoef: 3                      [-]              	exponential coefficient of respiration 
+temcoef: 0.25                 [-]              	temperature coefficient of respiration
+LAI_C: 5.70                   [-]              	coefficient of cover to leaf area index for shrub
+MortR: 0.12	              [-]              	mortality rate of shrub
+MortBasic: 0                  [-]             	basic mortality rate of shrub (related with cohortage)
+Grazed: 0                     [-]              	grazing coefficient of shrub
+WPWaterL1: 0.036              [vol%]           	wilting point in the upper layer
+WPWaterL2: 0.036              [vol%]           	wilting point in the lower layer
+cmax: 0.8                     [-]              	maximum cover of shrub in one cell
+conversionC_BM: 21000000      [g*ha-1]         	shrub biomass at 100% cover
+grazeLim: 0.9                 [-]              	limited edible coefficient of grazing for shrub
+grazeprefer: 0.3              [-]              	preferred edible coefficient of grazing for shrub
+grazepreferintra: 1           [-]              	preferred edible coefficient of grazing for shrub
+dispFrac: 0.005               [-]              	the rate of successful establishment for shrub
+estW: 1.205                   [-]              	factor determining minimum mean soil moisture content needed for establishment relative to wilting point for shrub
+specLoss: 0.01                [-]              	loss coefficient of shrub biomass per year
+dist0S: 0.5                   [-]              	determine the seed decline with distance
+distConstS: 0.1               [-]              	determine the decline of the exponential function with distance
+distconstS2: 0.0125           [-]              	determine the decline of the exponential function with distance, related with grazing intensity
+reserveLast: 0                [-]              	fraction of previous year that survives
+reserveThis: 0                [-]              	fraction of this year's biomass that goes into reserve biomass
+maximumcohage: 100            [?]	       	maximum cohortage of shrub	
+minimumcohage: 1              [?]	       	minimum cohortage of shrub
+initialR: 0.2                 [-]	       	determine how many cells generate the shrub 	
+maximumC: 0.9                 [-]	       	generated maximum shrub cover in all cells
+minimumC: 0.3                 [-]	       	generated minimum shrub cover in all cells
+
+##################
+#   Perennial    #
+#   PFT   2      #
+#################*
+Name: perennial1              [-]              	Name of PFT
+type: perennial grass         [-]              	Type of PFT
+UptakeRate: 0.9               [mm*(yr*g)-1]    	relative uptake rate per grass biomass
+RootL1: 0.63                  [-]              	fraction of perennial grass roots in upper layer
+RootL2: 0.37                  [-]              	fraction of perennial grass roots in lower layer
+GrowthR: 0.6                  [mm-1*yr-1]      	potential growth rate of perennial grass
+Transcoef: 0.5                [mm-1*yr-1]      	tranformation coefficient of transpiration on perennial grass growth
+Kcoef: 0.55                   [-]              	light attenuation coeffcient of perennial grass
+ecoef: 3.5                    [-]              	exponential coefficient of respiration 
+temcoef: 0.25                 [-]              	temperature coefficient of respiration                
+LAI_C: 3.60                   [-]              	coefficient of cover to leaf area index for perennial grass
+MortR: 0.54                   [-]              	mortality rate of perennial grass
+MortBasic: 0.01               [-]              	basic mortality rate of perennial grass
+Grazed: 0                     [-]              	grazing coefficient of perennial grass
+WPWaterL1: 0.036              [vol%]           	wilting point in the upper layer
+WPWaterL2: 0.036              [vol%]           	wilting point in the lower layer
+cmax: 1                       [-]              	maximum cover of perennial grass in one cell
+conversionC_BM: 1900000       [g*ha-1]         	perennial grass biomass at 100% cover
+grazeLim: 0.15                [-]              	limited edible coefficient of grazing for perennial grass
+grazeprefer: 1                [-]              	preferred edible coefficient of grazing for perennial grass
+grazepreferintra: 1           [-]              	preferred edible coefficient of grazing for perennial grass
+dispFrac: 0.05                [-]              	the rate of successful establishment for perennial grass
+estW: 1.05                    [-]              	factor determining minimum mean soil moisture content needed for establishment relative to wilting point for perennial grass
+specLoss: 0.1                 [-]              	loss coefficient of perennial grass biomass per year
+dist0S: 0                     [-]              	determine the seed decline with distance
+distConstS: 0                 [-]              	determine the decline of the exponential function with distance
+distconstS2: 0                [-]              	determine the decline of the exponential function with distance, related with grazing intensity
+reserveLast: 0.15             [-]              	fraction of previous year that survives
+reserveThis: 0.25             [-]              	fraction of this year's biomass that goes into reserve biomass
+PerennialS: 0.05              [-]	       	generated perennial cover when having shrub	
+
+#################
+#    Annual     #
+#    PFT  3     #
+################*
+Name: annua11                 [-]              	Name of PFT
+type: annual grass            [-]              	Type of PFT
+UptakeRate: 0.2               [mm*(yr*g)-1]    	relative uptake rate per grass biomass         
+RootL1: 1                     [-]              	fraction of annual grass roots in upper layer                        
+RootL2: 0                     [-]              	fraction of annual grass roots in lower layer
+GrowthR: 1.5                  [mm-1*yr-1]      	potential growth rate of annual grass
+Transcoef: 2                  [mm-1*yr-1]      	tranformation coefficient of transpiration on annual grass growth
+Kcoef: 0.5                    [-]              	light attenuation coeffcient of annual grass
+ecoef: 3                      [-]              	exponential coefficient of respiration
+temcoef: 0.25                 [-]              	temperature coefficient of respiration 
+LAI_C: 1.77                   [-]              	coefficient of cover to leaf area index for annual grass
+MortR: 0.8                    [-]              	mortality rate of annual grass
+MortBasic: 0                  [-]              	basic mortality rate of annual grass
+Grazed: 0	              [-]              	grazing coefficient of annual grass
+WPWaterL1: 0.039              [vol%]           	wilting point in the upper layer
+WPWaterL2: 0                  [vol%]           	wilting point in the lower layer
+cmax: 0                       [-]              	maximum cover of annual grass in one cell(capacity)
+conversionC_BM: 1700000       [g*ha-1]         	annual grass biomass at 100% cover
+grazeLim: 0.05                [-]              	limited edible coefficient of grazing for annual grass
+grazeprefer: 0.6              [-]              	preferred edible coefficient of grazing for annual grass
+grazepreferintra: 1           [-]              	preferred edible coefficient of grazing for annual grass
+dispFrac: 0                   [-]              	the rate of successful establishment for annual grass
+estW: 1.20                    [-]              	factor determining minimum mean soil moisture content needed for establishment relative to wilting point for annual grass
+specLoss: 0.01                [-]              	loss coefficient of annual grass biomass per year
+dist0S: 0                     [-]              	determine the seed decline with distance
+distConstS: 0                 [-]              	determine the decline of the exponential function with distance
+distconstS2: 0                [-]              	determine the decline of the exponential function with distance, related with grazing intensity
+reserveLast: 0.05             [-]              	fraction of previous year that survives
+reserveThis: 0.1              [-]              	fraction of this year's biomass that goes into reserve biomass

@@ -1,0 +1,12 @@
+map_id: 2 #id == 2, cyano
+nc: 0.5 # porosity (-)
+Z:  16.6 # Thickness (m)
+Ks: 17 # saturated hydraulic conductivity
+b: 2.8 # pore distribution
+sfc: 0.28 # field capacity
+SC: 0.01 # surface capacity (mm)
+kc: 0.59 # PET weighting factor
+shc: 0.09 # hygroscopic point
+fr: 0.7 # replenishment factor
+EP_factor: 0.4 # factor to reduce evaporation
+manning_n: 0.025 # mannings n

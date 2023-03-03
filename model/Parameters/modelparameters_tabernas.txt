@@ -1,0 +1,9 @@
+#General configuration parameters for model EcoHyD
+
+Site: tabernas			[-]		name of the site
+Latitude: 37.02			[�]		latitude of the site
+simYears: 1			[years]		total simulation time
+xsize: 74			[-]		x length of the grid (number of x-cells)
+ysize: 74			[-]		y length of the grid (number of y-cells)
+cellsize: 1			[m]		size of a single cell (length of a side of one cell)
+vegTimeStep: 14			[days]		number of days after which vegetation is updated#General configuration parameters for model EcoHyD

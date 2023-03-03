@@ -1,0 +1,15 @@
+map_id: 3 #id ==3, lichen
+RI: 5.5 # roughness index
+nc: 0.38 # porosity (-)
+Z:  17.2 # Thickness (mm)
+Ks: 8.9 # saturated hydraulic conductivity
+b: 2.5 # pore distribution
+sfc: 0.47 # field capacity
+SC: 0.02 # surface capacity (mm)
+kc: 0.59 # PET weighting factor
+shc: 0.12 # hygroscopic point
+fr: 0.7 # replenishment factor
+EP_factor: 0.38 # factor to reduce evaporation
+manning_n: 0.025 # mannings n
+h_min: 0.47
+theta_crit: 0.45

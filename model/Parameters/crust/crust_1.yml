@@ -1,0 +1,12 @@
+map_id: 1 # id 1 == incipient
+nc: 0.5 # porosity (-)
+Z:  10 # Thickness (m)
+Ks: 17.9 # saturated hydraulic conductivity
+b: 3.1 # pore distribution
+sfc: 0.27 # field capacity
+SC: 0.04 # surface capacity (mm)
+kc: 0.59 # PET weighting factor
+shc: 0.08 # hygroscopic point
+fr: 0.7 # replenishment factor
+EP_factor: 0.6 # factor to reduce evaporation
+manning_n: 0.025 # mannings n

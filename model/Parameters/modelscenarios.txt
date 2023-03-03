@@ -1,0 +1,14 @@
+#General scenario parameters
+Scenarios: 1
+ClimateRepetitions: 1
+ModelRepetitions: 1
+
+###################
+#   Scenario 1    #
+##################*
+OutputID: incipient_halfrain
+ModelParametersID: tabernas
+WeatherFileID: tabernas
+ElevationFileID: tabernas
+SoilParametersID: tabernas
+VegetationParametersID: control

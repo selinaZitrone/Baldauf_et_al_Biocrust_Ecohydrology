@@ -1,0 +1,30 @@
+#soil parameters for EcoHyD
+
+###################
+#  Soil texture   #
+#  loamy sand     #
+##################*
+
+# hydraulic parameters in water cell
+sf: 166                 [mm]         suction
+Ks: 6.9                 [mm/h]       hydraulic conductivity 
+WP: 0.18               [vol%]       wilting point        measured 0.235(clay)
+FC: 0.26                [vol%]       field capacity       measured 0.375(clay)
+sat: 0.26               [vol%]       water content at saturation     previous 0.28(clay)
+depL1: 60	         [mm]         depth of the upper soil layer
+depL2: 80               [mm]         depth of the lower soil layer
+iniSur: 0                [mm]         initial surface Water 
+iniL1: 0.215             [vol%]       initial moisture in upper soil layer
+iniL2: 0.271             [vol%]       initial moisture in lower soil layer
+EP: 1                    [-]          evaporation factor to reduce/increase EP from the upper layer
+rw: 0.01               [vol%]       residual water content, the soil cannot dry out below this content    previous 0.09(clay)
+maxFL2: 0                [-]          rate of maximal infiltration //0.1
+maxAmountFL2: 0          [mm/h]       maximal total infiltration //0
+diffConst: 0.05		 [-]          diffusion speed between layers
+TE: 0		         [-]          CO2 related factor to reduce evapotranspiration
+
+# vegetation parameters in water cell 
+VegregETL1: 1.2          [-]          Influence of vegetation cover on evapotranspiration in the soil upper layer for shading effects
+VegregETL2: 0.2		 [-]          Influence of vegetation cover on evapotranspiration in the soil upper layer for shading effects
+Veg_ETcoef1: 1.05        [-]          the transforming coefficient of linear regression from total vegetation cover to evapotranspiration for separation ET
+Veg_ETcoef2: 0.04        [-]          the transforming coefficient of linear regression from total vegetation cover to evapotranspiration for separation ET
