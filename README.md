@@ -1,3 +1,5 @@
+[![DOI](https://zenodo.org/badge/609289474.svg)](https://zenodo.org/badge/latestdoi/609289474)
+
 # Code and data for Baldauf et al. Biocrust Ecohydrology
 
 This repository contains code, data and model for the paper.
