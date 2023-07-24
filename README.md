@@ -22,7 +22,7 @@ See `analysis/Readme.md` for details.
 All model files, input and instructions on how to compile and use the model.
 See `model/Readme.md` for details
 
-### `data2/`
+### `data/`
 
 Model results analysed in the study. See `data/Readme.md` for details.
 
